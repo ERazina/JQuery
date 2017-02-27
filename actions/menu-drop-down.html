@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#menu{
+		display: block;
+		}
+		#submenu{
+		display: none;
+		}
+
+	</style>
+	<script type="text/javascript" src="../jquery-3.1.1.min.js"></script>
+	<script>
+$(document).ready(function(){
+
+
+			$('#menu').toggle(
+					function(){
+						$('#submenu').slideDown();
+						}
+					),
+
+				function(){
+				$('#submenu').slideUp();
+
+			};
+		
+		});
+	</script>
+</head>
+<body>
+
+<div id="menu">Menu
+	<div id="submenu">
+		<ul>
+			<li><a href="#">Link1</a></li>
+			<li><a href="#">Link2</a></li>
+			<li><a href="#">Link3</a></li>
+		</ul>
+	</div>
+</div>
+	
+</body>
+</html>

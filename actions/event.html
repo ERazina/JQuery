@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>event</title>
+	<style>
+		
+	</style>
+		<script type="text/javascript" src=jquery-3.1.1.min.js></script>
+		<script>
+			$(document).click(function(evt){
+				var Xpos = evt.pageX;
+				var Ypos = evt.pageY;
+				var scrX = evt.screenX;
+				var scrY = evt.screenY;
+				alert(scrY);
+			});
+		</script>
+</head>
+<body>
+	
+</body>
+</html>

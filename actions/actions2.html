@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#text{
+			background-color: orange;
+		}
+		#submenu{
+			display: none;
+		}
+
+	</style>
+	<script type="text/javascript" src="../jquery-3.1.1.min.js"></script>
+	<script>
+	$(function(){
+		// $('document').ready(function(){ - вместо документ реди просто $(function(){});
+			$('html').dblclick(function(){
+				alert('ой!');
+			})
+			$('a').mouseover(function(){
+				var message = "<p>Вы навели указатель мыши на сслыку</p>";
+				$('.main').append(message);
+			})
+			$(document).on('click','#button', function(){ 
+				alert('нажатие!'); 
+			}); 
+			// не работает
+			$('#button').click(function(){
+				$(this).val("Прекрати это!");
+			})
+			$( ".clock" ).click(function(){
+				alert( "Получилось!" );
+			})
+			$( "#target" ).click(function() {
+  			alert( "Handler for .click() called." );
+			})
+			$('#text').click(function(){
+				$(this).css('background-color', 'green');
+			})
+			$('#menu').hover(function(){
+				$('#submenu').slideDown('slow', function() {
+					
+				});
+			},
+				function(){
+					$('#submenu').slideUp('slow', function(){
+
+					});
+			});
+		});
+	</script>
+</head>
+<body>
+<div class="main">
+	<a href="">dsdf</a>
+	<a href="">dsf</a>
+	<a href="">sdf</a>
+	<a href="">sdf</a>
+	<a href="">sdf</a>
+	<a href="">sdf</a>
+	<a href="">sdf</a>
+	<a href="">sdf</a>
+	<a href="">sdf</a>
+	<a href="">sd</a>
+	</div>
+	<button id="button" val=""> Кнопка</button>
+	<div class="clock">lkjdf</div>
+<div id="target">Click her</div>
+<div id="other">
+  Trigger the handler
+</div>
+<div id="text">lsdjflksdjlkjfl sdkjlfjlkd jfk</div>
+<div id="menu">Меню
+	<div id="submenu">
+		<ul>
+			<li><a href="#">Юdjfklfdjs</a></li>
+			<li><a href="#">Юdjfklfdjs</a></li>
+			<li><a href="#">Юdjfklfdjs</a></li>
+		</ul>
+	</div>
+</div>
+	
+</body>
+</html>

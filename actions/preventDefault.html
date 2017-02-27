@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PreventDefault</title>
+	<script src="jquery-3.1.1.min.js"></script>
+	<script>
+		
+		$('document').ready(function(){
+			$('a').click(evt){
+			evt.PreventDefault();
+			alert("Вы нажали на ссылку!");
+			}	
+		});
+
+		// или
+		// $('document').ready(function(){
+		// 	$('a').click(){
+		// 	return false;
+		// 	}	
+		// });
+
+
+		//удаляем события
+
+
+	</script>
+</head>
+<body>
+	<a href="#">Link</a>
+
+	<a href="" class="overrite"></a>
+	<a href="" class="overrite"></a>
+	<a href="" class="overrite"></a>
+	<a href="" class="overrite"></a>
+	<a href="" class="overrite"></a>
+	<a href="" class="overrite"></a>
+</body>
+</html>

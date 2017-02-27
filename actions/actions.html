@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="../jquery-3.1.1.min.js"></script>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	.submenu{
+		display: none;
+	}
+	.block{
+		background-color: red;
+	}
+
+	h2{
+		font-size: 40px;
+	}
+
+	.more-tag{
+		color: red;
+	}
+	.more-tag p{
+		font-size: 40px;
+	}
+
+	.any{
+
+	}
+	</style>
+</head>
+<body>
+
+
+<div id="menu">
+	<a>Ссылка 1</a>
+	<a>Ссылка 2</a>
+	<a>Ссылка 3</a>
+		<div class="submenu">
+			<a>Ссылка 4</a>
+			<a>Ссылка 5</a>
+			<a>Ссылка 6</a>
+		</div>
+</div>
+<div class="more">lalalalalalal</div>
+<div class="more">lalalalalalal</div>
+<div class="more">lalalalalalal</div>
+<div class="more">lalalalalalal</div>
+<div class="more-tag"><p>asfaff</p></div>
+<div class="more-tag">dsfdf</div>
+<div class="more-tag">dfsfd</div>
+<div class="any">sdsfdf</div>
+
+<div class="error"><h2>Здесь нет ошибки</h2></div>
+	<script>
+		$('#menu').mouseover(function(){
+			$('.submenu').show().addClass('block').width(300).height(300).fadeIn(5000);
+			});
+		// $('#menu').mouseout(function(){
+		// 	$('.submenu').hide;
+		// });
+		// alert($('.error').html());
+		$('.error h2').text('Ни одной ошибки не найдено');
+		$('.error').after('<span>Ура! Получилось! Я добавила спан афтер!</span>');
+		$('.error').append('<p>Добавили элемент в конец!</p>');
+		$('.error').prepend('<p>Добавили элемент в начало</p>');
+		// $('.more').remove();
+		// $('.more').replaceWith('<p>Заменили содержимое</p>');
+		//$('.more').removeClass('more');
+		$('.more').toggleClass('more-tag').removeClass('more');
+		//узнаем цвет класса и запишем его в переменную чтобы затем вывести
+		var color=$('.more-tag').css('color');
+		// alert(color);
+		//изменяем шрифт - уменьшаем в 2 раза
+		var font = $('.more-tag p').css('font-size');
+		font = parseInt(font, 10);
+		$('.more-tag p').css('font-size', font/2);
+			//увеличиваем шрифт до 100 px
+		// $('.more-tag p').css('font-size', 100);
+			//добавляем стили css прямо в класс
+		$('.any').css('border', '2px solid red').css('color', '#faa');
+
+		//
+	</script>
+</body>
+</html>

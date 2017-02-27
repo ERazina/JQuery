@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Выборки JQuery</title>
+	<style>
+.alt{
+	float: right;
+}
+
+.red{
+	color: red;
+}
+.blue{
+	color: blue;
+}
+
+.block{
+	display: block;
+}
+.font{
+	font-size: 40px;
+}
+
+	</style>
+
+</head>
+<body>
+<nav id="navBar">
+<a href="#">Ссылка</a>
+<a class="nav">Ссылка</a>
+<a>Ссылка</a>
+<a>Ссылка</a>
+</nav>
+<div class="ul">
+	<ul>
+	<li><a>Ссылка</a></li>
+	<li>выаыва</li>
+	<li>ываыва</li>
+	<li><a>Щелкни по мне!</a></li>
+	<li><a>Ссылка</a></li>
+	<li><a>Ссылка</a></li>
+	</ul>
+</di
+<h1>Тут какой-то текст</h1>
+<h3>Тег h3</h3>
+<p>Lorem ipsum</p>
+<p>Lorem ipsum</p>
+<p>Lorem ipsum</p>
+<img src="#" alt="картинка">
+<img src="#" alt="картинка">
+<img src="#" alt="картинка">
+<img src="#">
+<img src="#">
+<a href="http://www.rel.ru">Ссылка</a>
+<a href="">Ссылка</a>
+
+<table>
+<tr>
+<td>sdkllskjfskldjlfsjf<td>
+</tr>
+<tr>
+<td>sdkllskjfskldjlfsjf<td>
+</tr>
+<tr>
+<td>sdkllskjfskldjlfsjf<td>
+</tr>
+<tr>
+<td>sdkllskjfskldjlfsjf<td>
+</tr>
+<tr>
+<td>sdkllskjfskldjlfsjf<td>
+</tr>
+</table>
+<p>sldkfjksjdlfjldjflksdjsflkjlkd slfjdslkfjskdjflsdjlfsjk dsfdsjfhskdjhfksjhdfkjh</p>
+<p>sldkfjksjdlfjldjflksdjsflkjlkd slfjdslkfjskdjflsdjlfsjk dsfdsjfhskdjhfksjhdfkjh</p>
+<p>sldkfjksjdlfjldjflksdjsflkjlkd slfjdslkfjskdjflsdjlfsjk dsfdsjfhskdjhfksjhdfkjh</p>
+<p>sldkfjksjdlfjldjflksdjsflkjlkd slfjdslkfjskdjflsdjlfsjk dsfdsjfhskdjhfksjhdfkjh</p>
+<p>sldkfjksjdlfjldjflksdjsflkjlkd slfjdslkfjskdjflsdjlfsjk dsfdsjfhskdjhfksjhdfkjh</p>
+<p>sldkfjksjdlfjldjflksdjsflkjlkd slfjdslkfjskdjflsdjlfsjk dsfdsjfhskdjhfksjhdfkjh</p>
+<p>sldkfjksjdlfjldjflksdjsflkjlkd slfjdslkfjskdjflsdjlfsjk dsfdsjfhskdjhfksjhdfkjh</p>
+<p>sldkfjksjdlfjldjflksdjsflkjlkd slfjdslkfjskdjflsdjlfsjk dsfdsjfhskdjhfksjhdfkjh</p>
+
+
+
+
+<script src="../jquery-3.1.1.min.js"></script>
+<script>
+	$('#navBar a'); //выбрали все теги a в id навбар
+ 	// $('.ul').hide(); //скрыть список - выбрали класс ul
+	$('body>p'); //выберет все элементы p относительно боди
+	$('h1+h3').show(); //выбираем соседние селекторы - тег h3 может скрыться если
+//селекторы атрибутов
+	$('img[alt]').addClass('alt');//изменили класс всем картинкам с атрибутом alt
+	$('a[href]').addClass('red');
+	// $('a[href]').css('color: red');
+	$('a[href^="http://"]').addClass('blue');
+	$('tr:even').text('blue');
+	$('tr:odd').text('1000');
+	$('p:first').text('Первый абзац');
+	$('p:last').text('Последний абзац');
+	// $('a:not(.nav)').addClass('blue');
+	$('a:not([href=http://])').addClass('red');
+	$('li:has(a)').addClass('block');
+	$('a:contains(Щелкни по мне!)').addClass('font');
+
+// :hidden - скрывает элементы
+	// $('ul:hidden').show();
+</script>
+</body>
+</html>
